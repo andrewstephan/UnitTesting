@@ -30,15 +30,15 @@ public class IsPositiveTest {
 
     }
 
-
-    @Test
-    public void checkIsNegativeTrue(){
-        IsPositive number = new IsPositive();
-        boolean result = number.isPositive(-5);
-    }
-    @ParametrizedTest
-    @ValueSource(int = {-3, -4, -5, -6})
-    public void checkNegativeParametrized(int numberFromInt){
+    @ParameterizedTest //ex1
+    @ValueSource(doubles = {-1.5,-4.6,-8.9})
+    public void checkIsNegativeParametrized(double numberFromValues){
+        IsPositive numberToCheck = new IsPositive();
+        boolean result = numberToCheck.isPositive(numberFromValues);
+        Assertions.assertFalse(result);
 
     }
+
+
+
 }

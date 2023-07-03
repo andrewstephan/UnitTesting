@@ -6,4 +6,9 @@ public class Calculator {
         return x*y;
     }
 
+
+    public double calculateModulo(double x, double y){//ex 2
+        return x%y;
+    }
+
 }
